@@ -1,11 +1,21 @@
+from cgitb import text
 import tkinter as tk
 import tkinter as ttk
 from tkinter import *
+from tkinter.messagebox import showinfo
 
 def clear_frame():
    for widgets in frame.winfo_children():
       widgets.destroy()
 def hoi():
+    if VraagSet1[2].get() == list3[0]:
+        showinfo('Resultaat', 'het een kaas uit engeland!')
+    elif VraagSet1[2].get() == list3[1] or VraagSet1[0].get() == list1[3]:
+        showinfo('Resultaat', 'het een kaas uit frankrijk!')
+    elif VraagSet1[0].get() == list1[0] or VraagSet1[0].get() == list1[1] and  VraagSet1[1].get() == list2[2] and VraagSet1[2].get() == list3[2]:
+        showinfo('Resultaat','het is een Nederlandse kaas van AlberHeijn' )
+    elif VraagSet1[0].get() == list1[0] or VraagSet1[0].get() == list1[1] and  VraagSet1[1].get() == list2[1] and VraagSet1[2].get() == list3[2]:
+        showinfo('Resultaat','het is een Nederlandse kaas van Jumbo!' )
     for i in VraagSet1: 
      print(i.get())
 
